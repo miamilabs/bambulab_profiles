@@ -1,0 +1,115 @@
+{
+  "filament_extruder_variant": [
+    "Direct Drive Standard",
+    "Direct Drive High Flow",
+    "Direct Drive E3D High Flow",
+    "Bowden Standard",
+    "Bowden High Flow",
+    "Bowden E3D High Flow"
+  ],
+  "filament_settings_id": [
+    "SUNLU TPU 95A @BBL X2D 0.4 nozzle"
+  ],
+  "from": "User",
+  "inherits": "Generic TPU @BBL X2D 0.4 nozzle",
+  "name": "SUNLU TPU 95A @BBL X2D 0.4 nozzle",
+  "filament_vendor": [
+    "SUNLU"
+  ],
+  "nozzle_temperature": [
+    "225",
+    "225",
+    "225",
+    "225",
+    "225",
+    "225"
+  ],
+  "nozzle_temperature_initial_layer": [
+    "225",
+    "225",
+    "225",
+    "225",
+    "225",
+    "225"
+  ],
+  "nozzle_temperature_range_low": [
+    "190"
+  ],
+  "nozzle_temperature_range_high": [
+    "230"
+  ],
+  "hot_plate_temp": [
+    "55"
+  ],
+  "hot_plate_temp_initial_layer": [
+    "55"
+  ],
+  "textured_plate_temp": [
+    "55"
+  ],
+  "textured_plate_temp_initial_layer": [
+    "55"
+  ],
+  "eng_plate_temp": [
+    "55"
+  ],
+  "eng_plate_temp_initial_layer": [
+    "55"
+  ],
+  "cool_plate_temp": [
+    "0"
+  ],
+  "cool_plate_temp_initial_layer": [
+    "0"
+  ],
+  "supertack_plate_temp": [
+    "0"
+  ],
+  "supertack_plate_temp_initial_layer": [
+    "0"
+  ],
+  "filament_max_volumetric_speed": [
+    "6",
+    "6",
+    "6",
+    "6",
+    "6",
+    "6"
+  ],
+  "filament_flow_ratio": [
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1"
+  ],
+  "filament_retraction_length": [
+    "0.8",
+    "0.8",
+    "0.8",
+    "0.8",
+    "0.8",
+    "0.8"
+  ],
+  "filament_retraction_speed": [
+    "30",
+    "30",
+    "30",
+    "30",
+    "30",
+    "30"
+  ],
+  "filament_deretraction_speed": [
+    "30",
+    "30",
+    "30",
+    "30",
+    "30",
+    "30"
+  ],
+  "filament_density": [
+    "1.21"
+  ],
+  "version": "2.8.0.5"
+}

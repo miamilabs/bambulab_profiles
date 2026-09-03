@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "collection": {
+    "name": "MiamiLabs Bambu Lab Filament Profile Reference",
+    "validated_on": "2026-09-03",
+    "bambu_studio_version": "2.8.x",
+    "printer_vendor": "Bambu Lab",
+    "printer_model": "X2D",
+    "nozzle_diameter_mm": 0.4,
+    "hotend_class": "standard-flow"
+  },
+  "profiles": [
+    {
+      "id": "anycubic-petg-x2d-04-standard",
+      "path": "profiles/bambu-lab/x2d/0.4mm-standard/anycubic/petg.json",
+      "filament_vendor": "Anycubic",
+      "material": "PETG",
+      "status": "provider-backed"
+    },
+    {
+      "id": "anycubic-petg-translucent-x2d-04-standard",
+      "path": "profiles/bambu-lab/x2d/0.4mm-standard/anycubic/petg-translucent.json",
+      "filament_vendor": "Anycubic",
+      "material": "PETG Translucent",
+      "status": "provider-backed-conservative"
+    },
+    {
+      "id": "anycubic-petg-cf-x2d-04-standard",
+      "path": "profiles/bambu-lab/x2d/0.4mm-standard/anycubic/petg-cf.json",
+      "filament_vendor": "Anycubic",
+      "material": "PETG-CF",
+      "status": "provider-backed"
+    },
+    {
+      "id": "esun-pla-plus-x2d-04-standard",
+      "path": "profiles/bambu-lab/x2d/0.4mm-standard/esun/pla-plus.json",
+      "filament_vendor": "eSUN",
+      "material": "PLA+",
+      "status": "provider-backed-conservative"
+    },
+    {
+      "id": "esun-pla-plus-hs-x2d-04-standard",
+      "path": "profiles/bambu-lab/x2d/0.4mm-standard/esun/pla-plus-hs.json",
+      "filament_vendor": "eSUN",
+      "material": "PLA+HS",
+      "status": "provider-backed-conservative"
+    },
+    {
+      "id": "esun-epla-matte-x2d-04-standard",
+      "path": "profiles/bambu-lab/x2d/0.4mm-standard/esun/epla-matte.json",
+      "filament_vendor": "eSUN",
+      "material": "ePLA-Matte",
+      "status": "provider-backed"
+    },
+    {
+      "id": "esun-esilk-pla-x2d-04-standard",
+      "path": "profiles/bambu-lab/x2d/0.4mm-standard/esun/esilk-pla.json",
+      "filament_vendor": "eSUN",
+      "material": "eSilk-PLA",
+      "status": "provider-backed-conservative"
+    },
+    {
+      "id": "sunlu-tpu-95a-x2d-04-standard",
+      "path": "profiles/bambu-lab/x2d/0.4mm-standard/sunlu/tpu-95a.json",
+      "filament_vendor": "SUNLU",
+      "material": "TPU 95A",
+      "status": "provider-backed-conservative"
+    }
+  ]
+}
