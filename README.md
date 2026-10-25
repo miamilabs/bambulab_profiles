@@ -31,10 +31,14 @@ the property of their respective owners.
 | eSUN | [ePLA-Matte](profiles/bambu-lab/x2d/0.4mm-standard/esun/epla-matte.json) | 230 C | 55 C | 22 mm3/s | eSUN Bambu-specific pairing |
 | eSUN | [eSilk-PLA](profiles/bambu-lab/x2d/0.4mm-standard/esun/esilk-pla.json) | 215 C | 55 C | 7.5 mm3/s | Main extruder preferred |
 | SUNLU | [TPU 95A](profiles/bambu-lab/x2d/0.4mm-standard/sunlu/tpu-95a.json) | 225 C | 55 C | 6 mm3/s | Direct-drive main extruder only |
+| SUNLU | [TPU 95A Black](profiles/bambu-lab/x2d/0.4mm-standard/sunlu/tpu-95a-black.json) | 225 C | 55 C | 3.2 mm3/s | Conservative Generic TPU flow limit; external feed |
 
 The values above were checked against the official sources listed in
-[docs/SOURCES.md](docs/SOURCES.md) on 2026-09-03. They are reference starting
-points, not certification for every spool.
+[docs/SOURCES.md](docs/SOURCES.md) on 2026-09-03; the black SUNLU TPU 95A
+variant was checked on 2026-10-25. They are reference starting points, not
+certification for every spool. The black variant is the recommended starting
+point for an uncalibrated standard SUNLU TPU 95A spool; its lower flow limit
+does not imply a measured difference caused by the black pigment.
 
 ## Repository layout
 

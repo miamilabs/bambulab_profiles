@@ -20,6 +20,26 @@ Relevant upstream implementation:
 This repository intentionally does not distribute .info files or locally
 generated AMS/cloud identifiers.
 
+### Making a material available in the device menu
+
+An imported preset that inherits `Generic TPU` is a slicing preset and is not
+listed as its own material under **Device > Materials Setting**. Bambu Studio
+2.8 collects root filament presets with a nonempty `filament_id` and a matching
+`compatible_printers` entry for that menu. Custom root presets have an empty
+`inherits` value and are stored in the account's `filament/base/` directory,
+with the complete resolved filament settings.
+
+Create that material locally through **Set filaments to use > Custom
+Filaments > Create New**, or generate an equivalent local root preset from
+the installed system defaults and the portable overrides. Preserve the TPU
+main-extruder restriction and other inherited settings when resolving the
+profile. Generate the material ID locally; never reuse a Bambu system ID or
+publish account-specific IDs. Avoid installing both a root and a child JSON
+with the same preset name. Restart Studio after direct file installation.
+
+This is separate from assigning a physical spool to the printer. Creating the
+material entry does not load filament or start a print.
+
 ## X2D variant arrays
 
 Variant-specific arrays follow Bambu Studio's X2D order:

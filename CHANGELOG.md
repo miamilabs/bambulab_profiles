@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- Add a black SUNLU TPU 95A X2D 0.4 mm preset with the conservative 3.2 mm3/s
+  Generic TPU flow limit, explicit black color, and current source notes.
+- Retain the existing SUNLU preset and document the distinction from Bambu
+  TPU 95A HF, drying requirements, and manual main-extruder feeding.
+
 ## 0.1.0 - 2026-09-03
 
 - Add eight provider-backed X2D 0.4 mm standard-hotend reference profiles.
