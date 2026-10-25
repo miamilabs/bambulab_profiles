@@ -71,6 +71,7 @@
       "path": "profiles/bambu-lab/x2d/0.4mm-standard/sunlu/tpu-95a-black.json",
       "filament_vendor": "SUNLU",
       "material": "TPU 95A Black",
+      "profile_kind": "standalone-material-template",
       "status": "provider-backed-conservative",
       "validated_on": "2026-10-25"
     }

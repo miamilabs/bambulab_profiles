@@ -54,9 +54,37 @@ scripts/
 ~~~
 
 Profiles are organized by printer, nozzle/hotend, and filament manufacturer.
-They are nozzle-specific **slicing presets**, not AMS base-material records.
+The original eight entries are nozzle-specific **slicing presets**. SUNLU TPU
+95A Black is a **standalone material template** with its own SUNLU vendor and
+all settings stored directly, without inheriting another profile.
 
 ## Installation
+
+### Standalone SUNLU material (JSON only)
+
+The black SUNLU TPU 95A template creates a separate **SUNLU > TPU 95A Schwarz**
+material. It does not modify Generic TPU, Bambu profiles, or existing user
+profiles. Close Bambu Studio first, then run from this repository:
+
+~~~bash
+python3 scripts/install_material.py \
+  profiles/bambu-lab/x2d/0.4mm-standard/sunlu/tpu-95a-black.json \
+  --filament-dir "$HOME/Library/Application Support/BambuStudio/user/<account>/filament"
+~~~
+
+Replace `<account>` with your existing account folder. On Windows, provide
+the corresponding filament directory shown below. The installer creates one
+new JSON in `filament/base/` and generates a fresh local material ID. It refuses
+to overwrite an existing profile, including a same-named slicing preset.
+No account or cloud IDs are distributed in this repository.
+
+Restart Bambu Studio. The separate material is named
+**SUNLU TPU 95A Schwarz @Bambu Lab X2D 0.4 nozzle**. It is available to the
+compatible X2D profile and the device material menu when user presets are
+supported. Ordinary TPU 95A requires manual external feeding to the main
+extruder; a menu entry does not make it suitable for automatic AMS feeding.
+
+### Original slicing presets
 
 1. Download the JSON profile appropriate for your printer and hotend.
 2. Import it using Bambu Studio's configuration import, or copy it into your

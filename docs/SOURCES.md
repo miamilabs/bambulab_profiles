@@ -71,10 +71,12 @@ that a particular printer and spool can reach those speeds.
 
 For comparison, the installed Bambu TPU 95A preset uses 230 C and 3.6 mm3/s;
 the HF variant uses 230 C and 12 mm3/s. Both use a 35 C textured PEI bed.
-Generic TPU uses 240 C, so its temperature must be adapted to SUNLU's range.
-The black preset also overrides the inherited 240 C tower-interface temperature
-to 225 C. Cooling, main-extruder-only printability, and other printer-specific
-behavior remain inherited from Generic TPU. Flow ratio 1.0 is an uncalibrated
+Generic TPU uses 240 C; the separate SUNLU profile uses 225 C within SUNLU's
+range, including for the tower-interface temperature. Cooling,
+main-extruder-only printability, and other printer-specific
+settings were copied from Generic TPU into the independent SUNLU material;
+the original Generic TPU profile is unchanged and there is no runtime profile
+inheritance. Flow ratio 1.0 is an uncalibrated
 starting value, and no personal pressure-advance result is included.
 
 The X2D manual requires ordinary TPU 95A to use the main extruder inlet and

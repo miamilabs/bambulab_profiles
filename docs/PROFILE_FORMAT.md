@@ -2,9 +2,11 @@
 
 ## Slicing preset versus AMS identity
 
-The JSON files in this repository are Bambu Studio filament slicing presets.
-They inherit a printer/nozzle-specific Bambu system preset and override only
-the values required for the named filament.
+The original eight JSON files are Bambu Studio filament slicing presets.
+They inherit a printer/nozzle-specific Bambu system preset. Their overrides
+apply only to the new child profile; inheritance never edits the original.
+SUNLU TPU 95A Black is a standalone material template with empty `inherits`
+and a complete settings snapshot instead.
 
 The AMS material-selection dialog uses a separate base-material identity built
 around filament_id and setting_id. Consequently, a profile can be visible in
@@ -29,13 +31,17 @@ listed as its own material under **Device > Materials Setting**. Bambu Studio
 `inherits` value and are stored in the account's `filament/base/` directory,
 with the complete resolved filament settings.
 
-Create that material locally through **Set filaments to use > Custom
-Filaments > Create New**, or generate an equivalent local root preset from
-the installed system defaults and the portable overrides. Preserve the TPU
-main-extruder restriction and other inherited settings when resolving the
-profile. Generate the material ID locally; never reuse a Bambu system ID or
-publish account-specific IDs. Avoid installing both a root and a child JSON
-with the same preset name. Restart Studio after direct file installation.
+Use `scripts/install_material.py` for the standalone SUNLU JSON. It copies
+the settings into a new root file and generates the material ID locally;
+it does not edit installed system profiles or existing user profiles. The
+template explicitly preserves TPU's main-extruder restriction. Never reuse
+a Bambu system ID or publish account-specific IDs. Avoid installing both a
+root and a child JSON with the same preset name: cloud sync can restore an
+older child and hide or replace a same-named root in memory. The standalone
+SUNLU name uses `@Bambu Lab X2D 0.4 nozzle`, distinguishing it from the earlier
+`@BBL X2D 0.4 nozzle` slicing preset. Close Studio before direct installation
+and reopen it afterwards. The JSON template needs the locally generated ID
+before it can serve as a device-menu material.
 
 This is separate from assigning a physical spool to the printer. Creating the
 material entry does not load filament or start a print.

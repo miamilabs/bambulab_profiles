@@ -27,7 +27,7 @@ do
 
   jq -e '
     (.name | type == "string" and length > 0) and
-    (.inherits | type == "string" and length > 0) and
+    (.inherits | type == "string") and
     (.from == "User") and
     (.filament_settings_id | type == "array" and length == 1) and
     (.filament_settings_id[0] == .name) and
@@ -35,6 +35,15 @@ do
     (.filament_extruder_variant | type == "array" and length == 6) and
     (.version | type == "string" and length > 0)
   ' "${profile}" >/dev/null || fail "required profile metadata is invalid: ${relative}"
+
+  if [ "$(jq -r '.inherits' "${profile}")" = "" ]; then
+    jq -e '
+      (.filament_type | type == "array" and length == 1) and
+      (.filament_diameter | type == "array" and length == 1) and
+      (.compatible_printers | type == "array" and length > 0) and
+      (.filament_printable | type == "array" and length > 0)
+    ' "${profile}" >/dev/null || fail "standalone material metadata is invalid: ${relative}"
+  fi
 
   jq -e '
     (has("user_id") or

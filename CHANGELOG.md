@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Store SUNLU TPU 95A Black as a complete standalone material template with
+  SUNLU as its own vendor and no profile inheritance. Add a JSON installer
+  that generates a local material ID and refuses to overwrite existing profiles.
 - Add a black SUNLU TPU 95A X2D 0.4 mm preset with the conservative 3.2 mm3/s
   Generic TPU flow limit, explicit black color, and current source notes.
 - Retain the existing SUNLU preset and document the distinction from Bambu
